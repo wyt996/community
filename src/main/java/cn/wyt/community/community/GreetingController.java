@@ -8,8 +8,6 @@ package cn.wyt.community.community;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -26,7 +24,7 @@ public class GreetingController {
     public String greeting(@RequestParam(name="name",defaultValue = "wyt") String name, Model model) {
 //        name = "wyt";
         model.addAttribute("name", name);
-        return "greeting";
+        return "index";
     }
 
 }
